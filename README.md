@@ -35,7 +35,6 @@ git log
 
 to create version/comit all changes
 ...............
-
 git commit -m 'message'
 
 
