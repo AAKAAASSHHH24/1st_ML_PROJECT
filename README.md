@@ -35,6 +35,7 @@ git log
 
 to create version/comit all changes
 ...............
+
 git commit -m 'message'
 
 
@@ -86,4 +87,16 @@ docker stop <container_id>
 
 
 
+alternate for requirements.txt
+...............
+python setup.py install
 
+
+install ipynb kernel
+..............
+pip install ipykernel
+
+
+install YAML
+.............
+pip install pyYAML
