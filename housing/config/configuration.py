@@ -19,12 +19,11 @@ class Configuartion:
             self.training_pipeline_config = self.get_training_pipeline_config()
             self.time_stamp = current_time_stamp
         except Exception as e:
-            raise HousingException(e,sys) from e
+            print(e)
 
 
     def get_data_ingestion_config(self) ->DataIngestionConfig:
         try:
-            raise Exception("Testing exception")
             artifact_dir = self.training_pipeline_config.artifact_dir
             data_ingestion_artifact_dir=os.path.join(
                 artifact_dir,
@@ -66,7 +65,7 @@ class Configuartion:
             logging.info(f"Data Ingestion config: {data_ingestion_config}")
             return data_ingestion_config
         except Exception as e:
-            raise HousingException(e,sys) from e
+            print(e)
 
     def get_data_validation_config(self) -> DataValidationConfig:
         try:
