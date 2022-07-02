@@ -1,101 +1,115 @@
-# 1st_ML_PROJECT
+## Start Machine Learning project.
+
+### Software and account Requirement.
+
+1. [Github Account](https://github.com)
+2. [Heroku Account](https://dashboard.heroku.com/login)
+3. [VS Code IDE](https://code.visualstudio.com/download)
+4. [GIT cli](https://git-scm.com/downloads)
+5. [GIT Documentation](https://git-scm.com/docs/gittutorial)
 
 
-creating conda environment
-..........
-
+Creating conda environment
+```
 conda create -p venv python==3.7 -y
-
-
-activate the environment
-............
-
+```
+```
 conda activate venv/
+```
+OR 
+```
+conda activate venv
+```
 
-install requirements
-.............
-
+```
 pip install -r requirements.txt
+```
 
-
-add files to git
-.............
+To Add files to git
+```
 git add .
+```
 
+OR
+```
+git add <file_name>
+```
 
-to check git status
-...................
+> Note: To ignore file or folder from git we can write name of file/folder in .gitignore file
+
+To check the git status 
+```
 git status
-
-
-to check all versions of maintained by git
-..............
+```
+To check all version maintained by git
+```
 git log
+```
 
+To create version/commit all changes by git
+```
+git commit -m "message"
+```
 
-to create version/comit all changes
-...............
-git commit -m 'message'
-
-
-
-to send changes to main
-.............
+To send version/changes to github
+```
 git push origin main
+```
 
-
-to check remote url
-............
+To check remote url 
+```
 git remote -v
+```
+
+To setup CI/CD pipeline in heroku we need 3 information
+1. HEROKU_EMAIL = akashrksht@gmail.com
+2. HEROKU_API_KEY = <>
+3. HEROKU_APP_NAME = beginner-a
+
+BUILD DOCKER IMAGE
+```
+docker build -t <image_name>:<tagname> .
+```
+> Note: Image name for docker must be lowercase
 
 
-
-To Setup a CI/CD pipeline in heroku we need 3 info:
-1. heroku_email = akashrksht@gmail.com
-2. heroku_API_KEY =
-56b1328f-a8eb-458c-95e7-4bb2673674b1
-3. heroku_app_name = beginner-a
-
-
-
-build docker image
-......
-docker build -t <image_name>:<tagname>
-
-Note: Image name for docker must be lowercase
-
-
-to list docker image
-...........
+To list docker image
+```
 docker images
+```
 
-to run docker image
-.......
-docker run -p 5000:5000 -e port5000 <imageid>
+Run docker image
+```
+docker run -p 5000:5000 -e PORT=5000 f8c749e73678
+```
 
-
-
-to check running container
-...........
+To check running container in docker
+```
 docker ps
+```
 
-
-to stop docker container
-.........
+Tos stop docker conatiner
+```
 docker stop <container_id>
+```
 
 
 
-alternate for requirements.txt
-...............
+```
 python setup.py install
+```
 
 
-install ipynb kernel
-..............
+Install ipykernel
+
+```
 pip install ipykernel
+```
 
 
-install YAML
-.............
-pip install pyYAML
+Data Drift:
+When your datset stats gets change we call it as data drift
+
+
+
+## Write a function to get training file path from artifact dir

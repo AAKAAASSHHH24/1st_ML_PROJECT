@@ -1,7 +1,8 @@
+numpy
 Flask
 gunicorn
 sklearn
-numpy
+pandas
 PyYAML
 evidently
 -e .
